@@ -5,3 +5,4 @@ import Map from "../components/map/map";
 const MapView = props => {
   return <Map></Map>;
 };
+export default MapView;
