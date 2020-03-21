@@ -6,6 +6,8 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Route exact path="/map" component={Map} />
+
         <Route exact path="/" component={Map} />
       </Router>
     );
