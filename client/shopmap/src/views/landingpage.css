@@ -1,0 +1,157 @@
+.nomargin {
+    margin: 0px;
+    margin-right: 0px;;
+}
+
+.headerbackground {
+    background-image: url(img/maptest2.png) ;
+    background-size: cover;
+    min-height: 700px;
+    
+}
+
+
+
+.vert-middle {
+    
+    vertical-align: middle;
+}
+
+.overlay-text {
+    position: relative; 
+    top: 10rem;
+}
+
+
+.abstand {
+    margin-top: 5rem;
+}
+
+.backgroundgrey{
+    background-color: #CFE6D4;
+    padding: 3rem;
+    min-height: 25rem;
+}
+
+.label {
+    background-image: url(img/label.png);
+    background-size: cover;
+}
+
+.friends {
+    background-image: url(img/friends.png);
+    min-height: 25rem;
+    width: auto;
+    
+    background-size: cover;
+}
+
+.laden1 {
+    background-image: url(img/laden1.png);
+    min-height: 25rem;
+    width: auto;
+    
+    background-size: cover;
+}
+
+.padding-right {
+    padding-right: 0px;;
+}
+
+.padding-left {
+    padding-left: 0px;;
+}
+
+
+@media (min-width: 1500px){
+hr {
+    background-color: white;
+    height: 0.04rem;
+    margin-right: 5rem;
+}
+}
+@media (min-width: 1000px){
+    hr {
+        background-color: white;
+        height: 0.04rem;
+        
+    }
+    }
+@media (max-width: 1000px){
+    hr {
+        background-color: white;
+        display: none;
+    }
+    }
+
+@font-face {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.margintoph3 {
+    padding-top: 2rem;
+}
+
+h1, .h1 {
+    font-size: 4rem;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  color: #BE3A2B;
+  letter-spacing: 0.7rem;
+
+}
+
+p {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.3rem;
+
+
+}
+
+h2, .h2 {
+  font-size: 6rem;
+font-family: proxima-nova, sans-serif;
+font-weight: 800;
+font-style: normal;
+color: white;
+letter-spacing: 0.9rem;
+}
+
+h3 {
+font-size: 2rem;
+font-family: proxima-nova, sans-serif;
+font-weight: 500;
+font-style: normal;
+color: white;
+letter-spacing: 0.4rem;
+
+
+}
+
+/* uber uns seite */
+
+.headerbackgrounduberuns {
+    background-image: url(img/headuberuns.png) ;
+    background-size: cover;
+    min-height: 700px;
+    
+}
+
+.road {
+    background-image: url(img/road.png);
+    min-height: 100rem;
+    width: auto;
+    
+    background-size: cover;
+}
+
+.backgroundgreyuberuns{
+    background-color: #CFE6D4;
+    padding: 3rem;
+    min-height: 25rem;
+}
