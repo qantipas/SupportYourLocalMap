@@ -58,6 +58,17 @@ const DescriptionText = styled.div`
   }
 `;
 const LandingPage = props => {
+  const onSelected = item => {
+    console.log(item);
+    props.history.push(
+      "/map/?lat=" +
+        item.latitude +
+        "&long=" +
+        item.longitude +
+        "&zoom=" +
+        item.zoom
+    );
+  };
   return (
     <div>
       <div className="headerbackground">
@@ -68,7 +79,7 @@ const LandingPage = props => {
         <br></br>
         <SearchForm
           mapboxApiAccessToken={TOKEN}
-          // onSelected={this.onSelected}
+          onSelected={onSelected}
           // viewport={viewport}
           // hideOnSelect={false}
           // queryParams={this.queryParams}
