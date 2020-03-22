@@ -1,41 +1,36 @@
 .nomargin {
-    margin: 0px;
-    margin-right: 0px;;
+  margin: 0px;
+  margin-right: 0px;
 }
 
 .headerbackground {
-    background-image: url(img/maptest2.png) ;
-    background-size: cover;
-    min-height: 700px;
-    
+  background-image: url(/img/map.jpeg);
+  background-size: cover;
+  min-height: 700px;
+  max-height: 900px;
 }
 
-
-
 .vert-middle {
-    
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .overlay-text {
-    position: relative; 
-    top: 10rem;
+  position: relative;
+  top: 10rem;
 }
-
 
 .abstand {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
-.backgroundgrey{
-    background-color: #CFE6D4;
-    padding: 3rem;
-    min-height: 25rem;
-    max-height: 31rem;
+.backgroundgrey {
+  background-color: #cfe6d4;
+  padding: 3rem;
+  height: 30rem;
 }
 
-@media (min-width: 1400px){
-.label {
+@media (min-width: 1400px) {
+  .label {
     height: 10rem;
     width: auto;
     margin-bottom: 3rem;
@@ -72,199 +67,189 @@
         }
 
 .mittig {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pfeil {
-    height: 1.5rem;
-    width: auto;
-    margin-top: 2.4rem;
-    margin-left: 0.6rem;
-    float: left;
+  height: 1.5rem;
+  width: auto;
+  margin-top: 2.4rem;
+  margin-left: 0.6rem;
+  float: left;
 }
 
 
 @media (min-width: 800px){
 .floatleft {
-    float: left;
-    margin-top: 2rem;
+  float: left;
+  margin-top: 2rem;
 }
 }
 
 
 .friends {
-    background-image: url(img/friends.png);
-    min-height: 31rem;
-    max-height: 31rem;
-    width: auto;
-    background-size: cover;
+  background-image: url(img/friends.png);
+  min-height: 31rem;
+  max-height: 31rem;
+  width: auto;
+  background-size: cover;
 }
 
 .laden1 {
-    background-image: url(img/laden1.png);
-    min-height: 25rem;
-    width: auto;
-    
-    background-size: cover;
+  background-image: url(img/laden1.png);
+  height: 30rem;
+
+  width: auto;
+
+  background-size: cover;
 }
 
 .padding-right {
-    padding-right: 0px;;
+  padding-right: 0px;
 }
 
 .padding-left {
-    padding-left: 0px;;
+  padding-left: 0px;
 }
 
-
-@media (min-width: 1500px){
-hr {
+@media (min-width: 1500px) {
+  hr {
     background-color: white;
     height: 0.04rem;
     margin-right: 5rem;
+  }
 }
+@media (min-width: 1000px) {
+  hr {
+    background-color: white;
+    height: 0.04rem;
+  }
 }
-@media (min-width: 1000px){
-    hr {
-        background-color: white;
-        height: 0.04rem;
-        
-    }
-    }
-@media (max-width: 1000px){
-    hr {
-        background-color: white;
-        display: none;
-    }
+@media (max-width: 1000px) {
+  hr {
+    background-color: white;
+    display: none;
+  }
 }
 
-
-@media (max-width: 1000px){
-    .nopadding {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    
+@media (max-width: 1000px) {
+  .nopadding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 @font-face {
-    font-family: proxima-nova, sans-serif;
-    font-weight: 800;
-    font-style: italic;
-}
-
-.margintoph3 {
-    padding-top: 2rem;
-}
-
-h1, .h1 {
-    font-size: 4rem;
   font-family: proxima-nova, sans-serif;
   font-weight: 800;
   font-style: italic;
-  color: #BE3A2B;
-  letter-spacing: 0.7rem;
+}
 
+.margintoph3 {
+  padding-top: 2rem;
+}
+
+h1,
+.h1 {
+  font-size: 4rem;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  color: #be3a2b;
+  letter-spacing: 0.7rem;
 }
 
 p {
-    font-family: proxima-nova, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    text-align: justify;
-
-
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.3rem;
+  text-align: justify;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 6rem;
-font-family: proxima-nova, sans-serif;
-font-weight: 800;
-font-style: normal;
-color: white;
-letter-spacing: 0.9rem;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  letter-spacing: 0.9rem;
 }
 
 h3 {
-font-size: 2rem;
-font-family: proxima-nova, sans-serif;
-font-weight: 500;
-font-style: normal;
-color: white;
-letter-spacing: 0.4rem;
-
-
+  font-size: 2rem;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  letter-spacing: 0.4rem;
 }
 
 h4 {
-    font-size: 3rem;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    color: #BE3A2B;
-    letter-spacing: 0.7rem;
-    padding-bottom: 2rem;
+  font-size: 3rem;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  color: #be3a2b;
+  letter-spacing: 0.7rem;
+  padding-bottom: 2rem;
 }
 h5 {
-    font-size: medium;
+  font-size: medium;
 }
 
-@media (max-width: 1000px){
-.paddingrand {
+@media (max-width: 1000px) {
+  .paddingrand {
     padding-left: 2rem;
-}
-.supporthashtag {
+  }
+  .supporthashtag {
     font-size: 2.5rem;
-}
-
+  }
 }
 
 a {
-
 }
 
 a:hover {
-    cursor: pointer;
-    
+  cursor: pointer;
 }
 
 footer {
-    margin-top: 5rem;
-    background-color: #CFE6D4;
-    height: 20rem;
-    width: 100%;
-    padding-top: 5rem;
+  margin-top: 5rem;
+  background-color: #cfe6d4;
+  height: 20rem;
+  width: 100%;
+  padding-top: 5rem;
 }
 
 .wirgegencorona {
-    height: 6rem;
-    width: auto;
+  height: 6rem;
+  width: auto;
 }
 
 /* uber uns seite */
 
 .headerbackgrounduberuns {
-    background-image: url(img/headuberuns.png) ;
-    background-size: cover;
-    min-height: 700px;
-    
+  background-image: url(img/headuberuns.png);
+  background-size: cover;
+  min-height: 700px;
 }
 
 .road {
-   height: 60rem;
-    width: auto;
-    padding-left: 5rem;
-    
-    background-size: cover;
+  height: 60rem;
+  width: auto;
+  padding-left: 5rem;
+
+  background-size: cover;
 }
 
-.backgroundgreyuberuns{
-    background-color: #CFE6D4;
-    padding: 3rem;
-    min-height: 25rem;
+.backgroundgreyuberuns {
+  background-color: #cfe6d4;
+  padding: 3rem;
+  min-height: 25rem;
 }
 
 .button {
