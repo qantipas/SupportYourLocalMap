@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Geocoder from "react-mapbox-gl-geocoder";
 import MapGL, {
   Popup,
   NavigationControl,
@@ -76,32 +77,49 @@ export default class Map extends Component {
       )
     );
   }
+  queryParams = {
+    country: "de"
+  };
+
+  onSelected = (viewport, item) => {
+    this.setState({ viewport });
+    console.log("Selected: ", item);
+  };
 
   render() {
     const { viewport } = this.state;
 
     return (
-      <MapGL
-        {...viewport}
-        width="100%"
-        height="100%"
-        mapStyle="mapbox://styles/qantipas/ck81q1r830riq1il6gprj646y"
-        onViewportChange={this._updateViewport}
-        mapboxApiAccessToken={TOKEN}
-      >
-        <Pins data={CITIES} onClick={this._onClickMarker} />{" "}
-        {this._renderPopup()}{" "}
-        <div style={fullscreenControlStyle}>
-          <FullscreenControl />
-        </div>{" "}
-        <div style={navStyle}>
-          <NavigationControl />
-        </div>{" "}
-        <div style={scaleControlStyle}>
-          <ScaleControl />
-        </div>{" "}
-        <ControlPanel containerComponent={this.props.containerComponent} />{" "}
-      </MapGL>
+      <>
+        <Geocoder
+          mapboxApiAccessToken={TOKEN}
+          onSelected={this.onSelected}
+          viewport={viewport}
+          hideOnSelect={true}
+          queryParams={this.queryParams}
+        />
+        <MapGL
+          {...viewport}
+          width="100%"
+          height="100%"
+          mapStyle="mapbox://styles/qantipas/ck81q1r830riq1il6gprj646y"
+          onViewportChange={this._updateViewport}
+          mapboxApiAccessToken={TOKEN}
+        >
+          <Pins data={CITIES} onClick={this._onClickMarker} />{" "}
+          {this._renderPopup()}{" "}
+          <div style={fullscreenControlStyle}>
+            <FullscreenControl />
+          </div>{" "}
+          <div style={navStyle}>
+            <NavigationControl />
+          </div>{" "}
+          <div style={scaleControlStyle}>
+            <ScaleControl />
+          </div>{" "}
+          <ControlPanel containerComponent={this.props.containerComponent} />{" "}
+        </MapGL>
+      </>
     );
   }
 }
