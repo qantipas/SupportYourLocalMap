@@ -1,17 +1,38 @@
 import React, { Component } from "react";
 import Geocoder from "react-mapbox-gl-geocoder";
+
+import Menu from "../map-menu";
 import MapGL, {
   Popup,
   NavigationControl,
   FullscreenControl,
   ScaleControl
 } from "react-map-gl";
-import ControlPanel from "../control-panel";
-import Pins from "../pins";
-import CityInfo from "../city-info";
+import ControlPanel from "./control-panel";
+import Pins from "./pins";
+import CityInfo from "./city-info";
 
 import CITIES from "../../cities.json";
-
+import styled from "styled-components";
+const SearchForm = styled(Geocoder)`
+  input {
+    margin: 10%;
+    width: 80%;
+    border: none;
+    border-radius: 100px;
+    padding: 5px;
+    color: #4a4a4a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .react-geocoder-results {
+    color: grey;
+    padding: 8px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+`;
 const TOKEN =
   "pk.eyJ1IjoicWFudGlwYXMiLCJhIjoiY2s4MWluZnBiMGZ1NDNobXMxc3hxZGl1aSJ9.KOxjAfRlBi5O-Qtojbdavw"; // Set your mapbox token here
 
@@ -91,13 +112,17 @@ export default class Map extends Component {
 
     return (
       <>
-        <Geocoder
-          mapboxApiAccessToken={TOKEN}
-          onSelected={this.onSelected}
-          viewport={viewport}
-          hideOnSelect={true}
-          queryParams={this.queryParams}
-        />
+        <Menu
+          searchBar={
+            <SearchForm
+              mapboxApiAccessToken={TOKEN}
+              onSelected={this.onSelected}
+              viewport={viewport}
+              hideOnSelect={true}
+              queryParams={this.queryParams}
+            />
+          }
+        ></Menu>
         <MapGL
           {...viewport}
           width="100%"
@@ -117,7 +142,7 @@ export default class Map extends Component {
           <div style={scaleControlStyle}>
             <ScaleControl />
           </div>{" "}
-          <ControlPanel containerComponent={this.props.containerComponent} />{" "}
+          {/* <ControlPanel containerComponent={this.props.containerComponent} />{" "} */}
         </MapGL>
       </>
     );
