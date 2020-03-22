@@ -55,7 +55,7 @@
     }
 @media (max-width: 920px){
         .label {
-            height: 7rem;
+            height: 8rem;
             width: auto;
             margin-bottom: 3rem;
             
@@ -85,22 +85,14 @@
     float: left;
 }
 
-.pfeil2 {
-    height: 1.5rem;
-    width: auto;
-    margin-top: 1rem;
-    margin-left: 0.6rem;
-    float: left;
-}
 
+@media (min-width: 800px){
 .floatleft {
     float: left;
     margin-top: 2rem;
 }
-.floatleft2 {
-    float: left;
-    margin-top: 1rem;
 }
+
 
 .friends {
     background-image: url(img/friends.png);
@@ -288,4 +280,38 @@ footer {
     border-radius: 30px;
     display: table-cell;
     vertical-align: middle 
+}
+
+.pfeil2 {
+    height: 1.5rem;
+    width: auto;
+    margin-top: 1.5rem;
+    margin-left: 0.6rem;
+    float: left;
+}
+
+.floatleft2 {
+    float: left;
+    margin-top: 1rem;
+}
+
+
+
+/* mobil */
+
+@media (max-width: 800px){
+.mobilhead {
+    font-size: 3.5rem;
+}
+.mobilheadbutton {
+    font-size: 1.5rem;
+}
+.mobilpfeil {
+    height: 0.9rem;
+    margin-top: 0.1rem;
+}
+.floatleft3 {
+    float: left;
+    
+}
 }

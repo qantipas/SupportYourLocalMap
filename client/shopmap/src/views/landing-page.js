@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 import Container from 'react-bootstrap/Container';
 import "./landingpage.css";
+import { Hidden } from "@material-ui/core";
 // import { Container } from "@material-ui/core";
 
 
@@ -15,13 +16,13 @@ const LandingPage = props => {
     <div className="overlay-text">
 <Row className="paddingrand" >
   <Col lg={5}></Col>
-  <Col lg={2}><h3 className="margintoph3">
+  <Col lg={2} ><h3 className="margintoph3">
     BÜCHEREI<br />
     MUSIKHAUS<br />
     etc.
 </h3></Col>
   <Col lg={4}>
-  <div><h2>
+  <div><h2 className="mobilhead">
     LOCALS <br />
     STAY <br />
     STRONG <br />
@@ -30,7 +31,7 @@ const LandingPage = props => {
   <Col lg={4}></Col>
   <Col lg={7} ><hr/></Col>
   <Col lg={7}></Col>
-  <Col lg={4} ><a><h3 className="margintoph3; floatleft">FINDE DEINE LOCALS</h3><img className="pfeil" src="img/pfeil.png" /></a></Col>
+  <Col lg={4} ><a><h3 className="margintoph3; floatleft mobilheadbutton">FINDE DEINE LOCALS</h3><img className="pfeil mobilpfeil" src="img/pfeil.png" /></a></Col>
 
   
 </Row>
@@ -53,13 +54,11 @@ const LandingPage = props => {
   </div>
 </Col>
 
-<Col lg={7} sm={12} className="nopadding">
+<Col lg={5} sm={12} className="nopadding">
 <div className="abstand"></div>
   <div className="friends"></div>
-
-
 </Col>
-
+<Col lg={2}></Col>
 </Row>
 
 {/* zweiter Abschnitt */}
@@ -68,13 +67,14 @@ const LandingPage = props => {
 
 <Row>
 <Col lg={2}></Col>
-<Col lg={10}><h1 className="paddingrand">#staystrong</h1></Col>
+<Col lg={10}><h1 className="paddingrand supporthashtag">#staystrong</h1></Col>
 <Col lg={2}></Col>
 <Col lg={5} sm={12} className="nopadding">
 <div className="abstand"></div>
 <div className="backgroundgrey ">
-  <p>“Die not macht erfinderisch.”
-Von dem klassischen Lieferservice, bis hin zur eingebauten Babyklappe in der Eingangstür. Es gibt viele Wege trotz
+  <p>Von dem klassischen Lieferservice, bis hin zur eingebauten Babyklappe in der Eingangstür. 
+    Es gibt viele Wege, wie Kunden trotz Einschränkungen bedient werden können. 
+    Jede Woche stellen wir Läden mit besonders kreativen Lösungen vor, um anderen Betrieben noch mehr kreativen Input und Anstöße zu geben.
 </p>
 </div>
 
@@ -108,10 +108,14 @@ Von dem klassischen Lieferservice, bis hin zur eingebauten Babyklappe in der Ein
 <Col lg={5} sm={12} className="padding-left" className="nopadding">
 
   <div className="backgroundgrey">
-  <h4>Name Laden</h4>
-    <p>Ob der Buchladen um die Ecke oder das Lieblingskaffee. 
-      Gerade kleine Betriebe trifft die Verkaufssperre hart. 
-      Wir wollen diesen Betrieben helfen und eine Map für alternative Dienstleistungen schaffen.</p>
+  <h4>Foto Firlé</h4>
+    <p>Foto Firlé ist ein familiengeführtes Fachgeschäft für Fotografie und bereits seit 1930 eine feste Größe in Frankfurt Bockenheim. 
+      In dem Ladengeschäft in der Leipziger Straße 18 befindet sich ein modern ausgestattetes Fotostudio für professionelle Bewerbungsfotos, 
+      Passbilder, Portrait- oder Familienaufnahmen.
+<br/><br/>
+Alternative Dienstleistung<br/>
+Im gegenüberliegenden Supermarkt liegt eine Kiste, in die zu entwickelnde Filme gelegt werden können. 
+iese wird dann einmal am Tag von den Mitarbeitern von Foto Firlé abgeholt und bearbeitet.</p>
   </div>
 </Col>
 
