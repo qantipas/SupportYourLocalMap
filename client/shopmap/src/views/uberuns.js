@@ -45,12 +45,15 @@ oder andere alternative Dienstleistungen anbieten] angezeigt werden. Ob eine Buc
 im benachbarten Supermarkt. Alle Infos werden von den Händlern selbst im Formular hinterlegt, sodass die Kunden genau wissen, wie sie die Dienstleistungen nutzen können. 
 Neben der SupportYourLocalMap es noch einen Bereich nur für B2C Unternehmen, indem für jede Branche Ideen für alternative Dienstleistungen gesammelt werden. 
 Natürlich wird dabei darauf geachtet, dass die vorgeschlagenen Ideen im Rahmen des Gesetzes sind.</p>
+<div className="mittig" >
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XcC_UzFS3EY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+</div>
 </Col>
 
 <Col lg={3} sm={12}>
 <div className="abstand"></div>
-  <div ><img className="road" src="/img/road.png"/></div>
+  <div ><img className="road abstand" src="/img/road.png"/></div>
 
 
 </Col>
