@@ -31,18 +31,70 @@
     background-color: #CFE6D4;
     padding: 3rem;
     min-height: 25rem;
+    max-height: 31rem;
 }
 
+@media (min-width: 1400px){
 .label {
-    background-image: url(img/label.png);
-    background-size: cover;
+    height: 10rem;
+    width: auto;
+    margin-bottom: 3rem;
+    
+}
+}
+@media (max-width: 1400px){
+    .label {
+        height: 5rem;
+        width: auto;
+        margin-bottom: 3rem;
+        
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    }
+@media (max-width: 920px){
+        .label {
+            height: 7rem;
+            width: auto;
+            margin-bottom: 3rem;
+            
+        }
+        p {
+            font-size: 1.3rem;
+        }
+        .backgroundgrey{
+            background-color: #CFE6D4;
+            padding: 3rem;
+            min-height: 25rem;
+            max-height: 36rem;
+        }
+        }
+
+.mittig {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.pfeil {
+    height: 1.5rem;
+    width: auto;
+    margin-top: 2.4rem;
+    margin-left: 0.6rem;
+    float: left;
+}
+
+.floatleft {
+    float: left;
+    margin-top: 2rem;
 }
 
 .friends {
     background-image: url(img/friends.png);
-    min-height: 25rem;
+    min-height: 31rem;
+    max-height: 31rem;
     width: auto;
-    
     background-size: cover;
 }
 
@@ -82,7 +134,16 @@ hr {
         background-color: white;
         display: none;
     }
+}
+
+
+@media (max-width: 1000px){
+    .nopadding {
+        padding-left: 0px;
+        padding-right: 0px;
     }
+    
+}
 
 @font-face {
     font-family: proxima-nova, sans-serif;
@@ -109,6 +170,7 @@ p {
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.3rem;
+    text-align: justify;
 
 
 }
@@ -133,6 +195,51 @@ letter-spacing: 0.4rem;
 
 }
 
+h4 {
+    font-size: 3rem;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    color: #BE3A2B;
+    letter-spacing: 0.7rem;
+    padding-bottom: 2rem;
+}
+h5 {
+    font-size: medium;
+}
+
+@media (max-width: 1000px){
+.paddingrand {
+    padding-left: 2rem;
+}
+.supporthashtag {
+    font-size: 2.5rem;
+}
+
+}
+
+a {
+
+}
+
+a:hover {
+    cursor: pointer;
+    
+}
+
+footer {
+    margin-top: 5rem;
+    background-color: #CFE6D4;
+    height: 20rem;
+    width: 100%;
+    padding-top: 5rem;
+}
+
+.wirgegencorona {
+    height: 6rem;
+    width: auto;
+}
+
 /* uber uns seite */
 
 .headerbackgrounduberuns {
@@ -143,7 +250,6 @@ letter-spacing: 0.4rem;
 }
 
 .road {
-    background-image: url(img/road.png);
     min-height: 100rem;
     width: auto;
     

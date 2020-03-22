@@ -50,7 +50,7 @@ Natürlich wird dabei darauf geachtet, dass die vorgeschlagenen Ideen im Rahmen 
 
 <Col lg={2} sm={12}>
 <div className="abstand"></div>
-  <div className="road"></div>
+  <div className="road"><img src="/img/road.png></div>
 
 
 </Col>
