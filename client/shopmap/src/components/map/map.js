@@ -10,13 +10,13 @@ import MapGL, {
 } from "react-map-gl";
 import ControlPanel from "./control-panel";
 import Pins from "./pins";
-import CityInfo from "./city-info";
+import CityInfo from "./info-card";
 
 import CITIES from "../../cities.json";
 import styled from "styled-components";
 const SearchForm = styled(Geocoder)`
   input {
-    margin: 10%;
+    margin-bottom: 25px;
     width: 80%;
     border: none;
     border-radius: 100px;
@@ -31,6 +31,8 @@ const SearchForm = styled(Geocoder)`
     margin: 5px;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: white;
+    opacity: 100%;
   }
 `;
 const TOKEN =
@@ -62,8 +64,9 @@ export default class Map extends Component {
     super(props);
     this.state = {
       viewport: {
-        latitude: 37.785164,
-        longitude: -100,
+        latitude: 50.121132,
+        longitude: 8.64862,
+
         zoom: 3.5,
         bearing: 0,
         pitch: 0
@@ -76,28 +79,28 @@ export default class Map extends Component {
     this.setState({ viewport });
   };
 
-  _onClickMarker = city => {
-    this.setState({ popupInfo: city });
+  _onClickMarker = shop => {
+    this.setState({ popupInfo: shop });
   };
 
-  _renderPopup() {
-    const { popupInfo } = this.state;
+  // _renderPopup() {
+  //   const { popupInfo } = this.state;
 
-    return (
-      popupInfo && (
-        <Popup
-          tipSize={5}
-          anchor="top"
-          longitude={popupInfo.longitude}
-          latitude={popupInfo.latitude}
-          closeOnClick={false}
-          onClose={() => this.setState({ popupInfo: null })}
-        >
-          <CityInfo info={popupInfo} />{" "}
-        </Popup>
-      )
-    );
-  }
+  //   return (
+  //     popupInfo && (
+  //       <Popup
+  //         tipSize={5}
+  //         anchor="top"
+  //         longitude={popupInfo.longitude}
+  //         latitude={popupInfo.latitude}
+  //         closeOnClick={false}
+  //         onClose={() => this.setState({ popupInfo: null })}
+  //       >
+  //         <CityInfo info={popupInfo} />{" "}
+  //       </Popup>
+  //     )
+  //   );
+  // }
   queryParams = {
     country: "de"
   };
@@ -106,7 +109,10 @@ export default class Map extends Component {
     this.setState({ viewport });
     console.log("Selected: ", item);
   };
-
+  onResults = results => {
+    this.setState({ results: results });
+    results.forEach(res => console.log(res));
+  };
   render() {
     const { viewport } = this.state;
 
@@ -118,10 +124,13 @@ export default class Map extends Component {
               mapboxApiAccessToken={TOKEN}
               onSelected={this.onSelected}
               viewport={viewport}
-              hideOnSelect={true}
+              hideOnSelect={false}
               queryParams={this.queryParams}
+              placeholder={"Suchen"}
+              onResults={this.onResults}
             />
           }
+          shop={this.state.popupInfo}
         ></Menu>
         <MapGL
           {...viewport}
@@ -132,7 +141,6 @@ export default class Map extends Component {
           mapboxApiAccessToken={TOKEN}
         >
           <Pins data={CITIES} onClick={this._onClickMarker} />{" "}
-          {this._renderPopup()}{" "}
           <div style={fullscreenControlStyle}>
             <FullscreenControl />
           </div>{" "}
