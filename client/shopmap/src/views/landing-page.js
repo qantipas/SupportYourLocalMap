@@ -189,18 +189,13 @@ Von dem klassischen Lieferservice, bis hin zur eingebauten Babyklappe in der Ein
 
 </footer>
 
-
-
-
 </div>
-
-
- 
- 
-
-
 
   
 };
 
+
+
 export default LandingPage;
+
+

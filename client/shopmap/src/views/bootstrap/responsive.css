@@ -1,0 +1,86 @@
+@media only screen and (max-width: 1024px) {
+
+  .hero-image,
+  .hero-image-dark {
+    background-position: 70%;
+  }
+
+  /* ----------------------------------
+     Spacing, Alignment, Helperclasses
+     ---------------------------------- */
+  .vert-flex-sm {
+    display: block;
+    height: auto;
+  }
+
+  .vert-middle {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .m-0-auto-sm {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  /* ----------------------------------
+   Header Navigation
+   ---------------------------------- */
+  header {
+    top: 0px;
+    background-color: transparent !important;
+    box-shadow: none;
+    z-index: ;
+  }
+
+  .navbar-button {
+    display: none;
+  }
+
+  .sidebar {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* ----------------------------------
+     Spacing, Alignment, Helperclasses
+     ---------------------------------- */
+  .text-right-sm {
+    text-align: right;
+  }
+
+  .text-left-sm {
+    text-align: left;
+  }
+
+  .text-center-sm {
+    text-align: center;
+  }
+
+  /* ----------------------------------
+     Experience Section
+     ---------------------------------- */
+  .timeline .marker.l-100-sm:before {
+    left: 100%;
+    margin-left: -5px;
+  }
+
+  .timeline:before {
+    left: 50%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+.logo {
+  width: auto;
+  min-height: 40px;
+}
+
+}

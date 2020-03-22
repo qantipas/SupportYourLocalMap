@@ -27,7 +27,7 @@ const LandingPage = props => {
 <Col lg={2}></Col>
 <Col lg={10}><h1>#überuns</h1></Col>
 <Col lg={2}></Col>
-<Col lg={6} sm={12}>
+<Col lg={5} sm={12}>
 <div className="abstand"></div>
   <div className="backgroundgreyuberuns">
     
@@ -48,9 +48,9 @@ Natürlich wird dabei darauf geachtet, dass die vorgeschlagenen Ideen im Rahmen 
   </div>
 </Col>
 
-<Col lg={2} sm={12}>
+<Col lg={3} sm={12}>
 <div className="abstand"></div>
-  <div className="road"><img src="/img/road.png></div>
+  <div ><img className="road" src="/img/road.png"/></div>
 
 
 </Col>
@@ -58,6 +58,40 @@ Natürlich wird dabei darauf geachtet, dass die vorgeschlagenen Ideen im Rahmen 
 
 </Row>
 
+<div className="abstand"></div>
+
+<Row>
+
+<Col lg={2}></Col>
+<Col lg={3} sm={12} className="nopadding">
+<div className="abstand"></div>
+  <div className="backgroundgrey">
+    <div className="mittig"><img className="label" src="/img/label.png" /></div>
+    <p>Ob der Buchladen um die Ecke oder das Lieblingskaffee. 
+      Gerade kleine Betriebe trifft die Verkaufssperre hart. 
+      Wir wollen diesen Betrieben helfen und eine Map für alternative Dienstleistungen schaffen.</p>
+  </div>
+</Col>
+
+<Col lg={7} sm={12} className="nopadding">
+<div className="abstand"></div>
+  <div className="friends"><div className="button"><a ><h3 className="floatleft2 ">FINDE DEINE LOCALS</h3><img className="pfeil2" src="img/pfeil.png" /></a></div></div>
+
+
+</Col>
+
+</Row>
+
+<footer >
+<Row >
+<Col lg={2} ></Col>
+<Col lg={2} ><h5 className="paddingrand"><a>Über uns</a></h5><h5 className="paddingrand"><a>Impressum</a></h5><h5 className="paddingrand"><a>Datenschutz</a></h5></Col>
+<Col lg={2}></Col>
+<Col lg={4} ><h5 className="paddingrand">Ein Projekt im Rahmen des Hackatons der Bundesregierung.</h5><img className="wirgegencorona" src="/img/wirgegencoronalogo.png"/></Col>
+
+</Row>
+
+</footer>
 
 </div>
 

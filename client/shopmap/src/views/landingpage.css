@@ -85,9 +85,21 @@
     float: left;
 }
 
+.pfeil2 {
+    height: 1.5rem;
+    width: auto;
+    margin-top: 1rem;
+    margin-left: 0.6rem;
+    float: left;
+}
+
 .floatleft {
     float: left;
     margin-top: 2rem;
+}
+.floatleft2 {
+    float: left;
+    margin-top: 1rem;
 }
 
 .friends {
@@ -250,8 +262,9 @@ footer {
 }
 
 .road {
-    min-height: 100rem;
+   height: 60rem;
     width: auto;
+    padding-left: 5rem;
     
     background-size: cover;
 }
@@ -260,4 +273,19 @@ footer {
     background-color: #CFE6D4;
     padding: 3rem;
     min-height: 25rem;
+}
+
+.button {
+    position: relative; 
+    top: 23rem;
+    left: 30rem;
+    text-align: center;
+    background-color: #BE3A2B;
+    height: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 30px;
+    display: table-cell;
+    vertical-align: middle 
 }

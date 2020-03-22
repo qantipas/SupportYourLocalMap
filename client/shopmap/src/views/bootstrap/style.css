@@ -1,0 +1,116 @@
+body {
+    
+}
+
+
+@font-face {
+  font-family: 'montserrat', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+.abstand {
+    margin-top: 20px;
+}
+
+.abstandviel {
+    margin-top: 6em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    max-height: 70px;
+   
+    padding-top: 0px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    background-color: #CA2F39;
+    
+}
+
+.menu a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  font-style: normal;
+    font-size: 1.4em;
+    padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+
+.spaltezwei {
+    padding-left: 6em;
+    padding-right: 6em
+}
+
+
+}
+
+.spalteeins {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+footer {
+    background-color: #CA2F39;
+    height: 10em;
+    margin-bottom: 30px;
+}
+
+hr {
+    background-color: #CA2F39;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+font-size: 1em;
+color: white;
+}
+
+a:hover {
+      font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+color: white;
+}
+
+.imgvolleseite{
+    width: 100%;
+}
+
+.abstandbild{
+    margin-top: 30px;
+}
+
+.einzug {
+    padding-left: 3em;
+}
