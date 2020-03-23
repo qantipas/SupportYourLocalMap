@@ -16,6 +16,8 @@ class App extends Component {
           {/* <Route exact path="/map/" component={Map} /> */}
 
           <Route exact path="/map/:latitude/:longitude/:zoom" component={Map} />
+
+          <Route exact path="/map/" component={Map} />
           <Route exact path="/uberuns" component={Uberuns} />
           <Route exact path="/" component={LandingPage} />
         </Router>
