@@ -15,8 +15,8 @@ const TOKEN =
 const SearchForm = styled(Geocoder)`
   input {
     margin: 45px;
-    margin-top: 350px;
-    width: 30%;
+    margin-top: 0px;
+    width: 100%;
     border: none;
     border-radius: 100px;
     padding: 5px;
@@ -32,30 +32,37 @@ const SearchForm = styled(Geocoder)`
       width: 98%;
       margin: 1%;
 
-      margin-top: 350px;
       font-size: 1.6em;
     }
   }
 `;
 
 const DescriptionText = styled.div`
-  position: absolute;
+  position: relative;
   margin: 45px;
-  margin-top: 150px;
-  width: 30%;
-  padding: 5px;
+  margin-bottom: 0px;
+  width: 100%;
   color: #4a4a4a;
   font-family: proxima-nova, sans-serif;
   font-size: 2em;
-  padding: 15px;
-  padding-left: 30px;
 
   @media screen and (max-device-width: 736px) {
     width: 98%;
     margin: 1%;
 
-    margin-top: 350px;
     font-size: 1.6em;
+  }
+`;
+const SearchArea = styled.div`
+  width: 50%;
+  position: absolute;
+  padding: 50px;
+  padding-top: 200px;
+  @media screen and (max-device-width: 736px) {
+    width: 100%;
+
+    padding: 20px;
+    padding-top: 200px;
   }
 `;
 const LandingPage = props => {
@@ -73,21 +80,22 @@ const LandingPage = props => {
   return (
     <div>
       <div className="headerbackground">
-        <DescriptionText>
-          Jetzt deine Postleitzahl eingeben und erkunden, welche Optionen es in
-          deiner Nähe gibt!
-        </DescriptionText>
-        <br></br>
-        <SearchForm
-          mapboxApiAccessToken={TOKEN}
-          onSelected={onSelected}
-          // viewport={viewport}
-          // hideOnSelect={false}
-          // queryParams={this.queryParams}
-          defaultValue="Suchen"
-          // onResults={this.onResults}
-        />
-
+        <SearchArea>
+          <DescriptionText>
+            Jetzt deine Postleitzahl eingeben und erkunden, welche Optionen es
+            in deiner Nähe gibt!
+          </DescriptionText>
+          <br></br>
+          <SearchForm
+            mapboxApiAccessToken={TOKEN}
+            onSelected={onSelected}
+            // viewport={viewport}
+            // hideOnSelect={false}
+            // queryParams={this.queryParams}
+            defaultValue="Suchen"
+            // onResults={this.onResults}
+          />
+        </SearchArea>
         {/* <div className="overlay-text">
           <Row className="paddingrand">
             <Col lg={5}></Col>
@@ -126,162 +134,180 @@ const LandingPage = props => {
       </div>
       <div className="abstand"></div>
 
-<Row>
-<Col lg={2}></Col>
-<Col lg={10}><h1 className="paddingrand supporthashtag">#support your locals</h1></Col>
-<Col lg={2}></Col>
-<Col lg={3} sm={12} className="nopadding">
-<div className="abstand"></div>
-  <div className="backgroundgrey">
-    <div className="mittig"><img className="label" src="/img/label.png" /></div>
-    
-    <p>Ob der Buchladen um die Ecke oder das Lieblingskaffee. 
-      Gerade kleine Betriebe trifft die Verkaufssperre hart. 
-      Wir wollen diesen Betrieben helfen und eine Map für alternative Dienstleistungen schaffen.</p>
-  </div>
-</Col>
+      <Row>
+        <Col lg={2}></Col>
+        <Col lg={10}>
+          <h1 className="paddingrand supporthashtag">#support your locals</h1>
+        </Col>
+        <Col lg={2}></Col>
+        <Col lg={3} sm={12} className="nopadding">
+          <div className="abstand"></div>
+          <div className="backgroundgrey">
+            <div className="mittig">
+              <img className="label" src="/img/label.png" />
+            </div>
 
-<Col lg={5} sm={12} className="nopadding">
-<div className="abstand"></div>
-  <div className="friends"></div>
-</Col>
-<Col lg={2}></Col>
-</Row>
+            <p>
+              Ob der Buchladen um die Ecke oder das Lieblingskaffee. Gerade
+              kleine Betriebe trifft die Verkaufssperre hart. Wir wollen diesen
+              Betrieben helfen und eine Map für alternative Dienstleistungen
+              schaffen.
+            </p>
+          </div>
+        </Col>
 
-{/* zweiter Abschnitt */}
+        <Col lg={5} sm={12} className="nopadding">
+          <div className="abstand"></div>
+          <div className="friends"></div>
+        </Col>
+        <Col lg={2}></Col>
+      </Row>
 
-<div className="abstand"></div>
+      {/* zweiter Abschnitt */}
 
-<Row>
-<Col lg={2}></Col>
-<Col lg={10}><h1 className="paddingrand supporthashtag">#staystrong</h1></Col>
-<Col lg={2}></Col>
-<Col lg={5} sm={12} className="nopadding">
-<div className="abstand"></div>
-<div className="backgroundgrey ">
-<h4>Die Idee</h4>
-  <p>Von dem klassischen Lieferservice, bis hin zur eingebauten Babyklappe in der Eingangstür. 
-    Es gibt viele Wege, wie Kunden trotz Einschränkungen bedient werden können. 
-    Jede Woche stellen wir Läden mit besonders kreativen Lösungen vor, um anderen Betrieben noch mehr kreativen Input und Anstöße zu geben.
-</p>
-</div>
+      <div className="abstand"></div>
 
+      <Row>
+        <Col lg={2}></Col>
+        <Col lg={10}>
+          <h1 className="paddingrand supporthashtag">#staystrong</h1>
+        </Col>
+        <Col lg={2}></Col>
+        <Col lg={5} sm={12} className="nopadding">
+          <div className="abstand"></div>
+          <div className="backgroundgrey ">
+            <h4>Die Idee</h4>
+            <p>
+              Von dem klassischen Lieferservice, bis hin zur eingebauten
+              Babyklappe in der Eingangstür. Es gibt viele Wege, wie Kunden
+              trotz Einschränkungen bedient werden können. Jede Woche stellen
+              wir Läden mit besonders kreativen Lösungen vor, um anderen
+              Betrieben noch mehr kreativen Input und Anstöße zu geben.
+            </p>
+          </div>
+        </Col>
+        <Col lg={3} sm={12} className="nopadding">
+          <div className="abstand"></div>
+          <div className="backgroundgrey">
+            <div className="mittig">
+              <img className="label" src="/img/label.png" />
+            </div>
+            <p>
+              Werde von deiner Lokalen Kundschaft mit deinen „Coronaangeboten
+              gefunden.
+            </p>
+          </div>
+        </Col>
+        <Col lg={2}></Col>
+      </Row>
 
-</Col>
-<Col lg={3} sm={12} className="nopadding">
-<div className="abstand"></div>
-  <div className="backgroundgrey">
-    <div className="mittig"><img className="label" src="/img/label.png" /></div>
-    <p>Werde von deiner Lokalen Kundschaft mit deinen „Coronaangeboten gefunden.</p>
-  </div>
-</Col>
-<Col lg={2}></Col>
+      {/* Beispiele */}
 
-</Row>
+      <div className="abstand"></div>
 
+      <Row>
+        <Col lg={2}></Col>
+        <Col lg={3} sm={12} className="padding-right">
+          <div className="laden1"></div>
+        </Col>
+        <Col lg={5} sm={12} className="padding-left" className="nopadding">
+          <div className="backgroundgrey">
+            <h4>Foto Firlé</h4>
+            <p>
+              Foto Firlé ist ein familiengeführtes Fachgeschäft für Fotografie
+              und bereits seit 1930 eine feste Größe in Frankfurt Bockenheim.
+              <br />
+              <br />
+              Alternative Dienstleistung
+              <br />
+              Im gegenüberliegenden Supermarkt liegt eine Kiste, in die zu
+              entwickelnde Filme gelegt werden können. iese wird dann einmal am
+              Tag von den Mitarbeitern von Foto Firlé abgeholt und bearbeitet.
+            </p>
+          </div>
+        </Col>
 
-{/* Beispiele */}
+        <Col lg={2}></Col>
+      </Row>
 
+      {/* Beispiel 2 */}
+      <div className="abstand"></div>
 
-<div className="abstand"></div>
+      <Row>
+        <Col lg={2}></Col>
 
-<Row >
-<Col lg={2}></Col>
-<Col lg={3} sm={12} className="padding-right">
+        <Col lg={5} sm={12} className="padding-right">
+          <div className="backgroundgrey">
+            <h4>Musik Weber</h4>
 
-  <div className="laden1"></div>
+            <p>
+              Musik Weber hat Tradition in der Branche. Von Streich bis
+              Blasinstrumente, über Pianos für klein und groß.
+              <br />
+              <br />
+              Alternative Dienstleistung
+              <br />
+              Die Mitarbeiter führen die Kunden via FaceTime durch das Geschäft.
+              Sie beraten und zeigen, sodass der Kunde ein Einkaufserlebnis hat.
+              Bezahlt wird am Ende über PayPal.
+            </p>
+          </div>
+        </Col>
+        <Col lg={3} sm={12} className="padding-left" className="nopadding">
+          <div className="laden1"></div>
+        </Col>
 
+        <Col lg={2}></Col>
+      </Row>
 
-</Col>
-<Col lg={5} sm={12} className="padding-left" className="nopadding">
+      {/* Beispiel 3 */}
 
-  <div className="backgroundgrey">
-  <h4>Foto Firlé</h4>
-    <p>Foto Firlé ist ein familiengeführtes Fachgeschäft für Fotografie und bereits seit 1930 eine feste Größe in Frankfurt Bockenheim. 
-<br/><br/>
-Alternative Dienstleistung<br/>
-Im gegenüberliegenden Supermarkt liegt eine Kiste, in die zu entwickelnde Filme gelegt werden können. 
-iese wird dann einmal am Tag von den Mitarbeitern von Foto Firlé abgeholt und bearbeitet.</p>
-  </div>
-</Col>
+      <div className="abstand"></div>
 
+      <Row>
+        <Col lg={2}></Col>
+        <Col lg={3} sm={12} className="padding-right">
+          <div className="laden1"></div>
+        </Col>
+        <Col lg={5} sm={12} className="padding-left" className="nopadding">
+          <div className="backgroundgrey">
+            <h4>Name Laden</h4>
+            <p>
+              Ob der Buchladen um die Ecke oder das Lieblingskaffee. Gerade
+              kleine Betriebe trifft die Verkaufssperre hart. Wir wollen diesen
+              Betrieben helfen und eine Map für alternative Dienstleistungen
+              schaffen.
+            </p>
+          </div>
+        </Col>
 
-<Col lg={2}></Col>
+        <Col lg={2}></Col>
+      </Row>
 
-</Row>
-
-{/* Beispiel 2 */}
-<div className="abstand"></div>
-
-<Row >
-<Col lg={2}></Col>
-
-<Col lg={5} sm={12} className="padding-right" >
-
-  <div className="backgroundgrey">
-
-  <h4>Musik Weber</h4>
-    
-    <p>Musik Weber hat Tradition in der Branche. Von Streich bis Blasinstrumente, über Pianos für klein und groß. 
-      <br/><br/>
-Alternative Dienstleistung<br/>
-Die Mitarbeiter führen die Kunden via FaceTime durch das Geschäft. 
-Sie beraten und zeigen, sodass der Kunde ein Einkaufserlebnis hat. Bezahlt wird am Ende über PayPal.</p>
-  </div>
-</Col>
-<Col lg={3} sm={12} className="padding-left" className="nopadding">
-
-  <div className="laden1"></div>
-
-
-</Col>
-
-
-
-<Col lg={2}></Col>
-
-</Row>
-
-{/* Beispiel 3 */}
-
-<div className="abstand"></div>
-
-<Row >
-<Col lg={2}></Col>
-<Col lg={3} sm={12} className="padding-right">
-
-  <div className="laden1"></div>
-
-
-</Col>
-<Col lg={5} sm={12} className="padding-left" className="nopadding">
-
-  <div className="backgroundgrey">
-  <h4>Name Laden</h4>
-    <p>Ob der Buchladen um die Ecke oder das Lieblingskaffee. 
-      Gerade kleine Betriebe trifft die Verkaufssperre hart. 
-      Wir wollen diesen Betrieben helfen und eine Map für alternative Dienstleistungen schaffen.</p>
-  </div>
-</Col>
-
-
-<Col lg={2}></Col>
-
-</Row>
-
-
-<footer >
-<Row >
-<Col lg={2} ></Col>
-<Col lg={2} ><h5 className="paddingrand"><a>Über uns</a></h5><h5 className="paddingrand"><a>Impressum</a></h5><h5 className="paddingrand"><a>Datenschutz</a></h5></Col>
-<Col lg={2}></Col>
-<Col lg={4} ><h5 className="paddingrand">Ein Projekt im Rahmen des Hackatons der Bundesregierung.</h5><img className="wirgegencorona" src="/img/wirgegencoronalogo.png"/></Col>
-
-</Row>
-
-</footer>
-
-</div>
+      <footer>
+        <Row>
+          <Col lg={2}></Col>
+          <Col lg={2}>
+            <h5 className="paddingrand">
+              <a>Über uns</a>
+            </h5>
+            <h5 className="paddingrand">
+              <a>Impressum</a>
+            </h5>
+            <h5 className="paddingrand">
+              <a>Datenschutz</a>
+            </h5>
+          </Col>
+          <Col lg={2}></Col>
+          <Col lg={4}>
+            <h5 className="paddingrand">
+              Ein Projekt im Rahmen des Hackatons der Bundesregierung.
+            </h5>
+            <img className="wirgegencorona" src="/img/wirgegencoronalogo.png" />
+          </Col>
+        </Row>
+      </footer>
+    </div>
   );
 };
 
