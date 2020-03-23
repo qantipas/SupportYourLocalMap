@@ -4,7 +4,7 @@
 }
 
 .headerbackground {
-  background-image: url(/img/map.jpeg);
+  background-image: url(img/map.jpeg);
   background-size: cover;
   min-height: 700px;
   max-height: 900px;

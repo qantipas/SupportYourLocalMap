@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
   const classes = useStyles();
   const preventDefault = event => event.preventDefault();
   return (
@@ -58,8 +58,8 @@ export default function ButtonAppBar() {
           >
             #SupportYourLocals
           </Typography> */}
-          <Button href="/">Home</Button>
-          <Button href="/map">Map</Button>
+          <Button onClick={() => props.history.push("/")}>Home</Button>
+          <Button onClick={() => props.history.push("/map/")}>Map</Button>
 
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>

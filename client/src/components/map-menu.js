@@ -9,7 +9,6 @@ const StyledMenu = styled.div`
   position: fixed;
   right: 20px;
   top: 100px;
-  min-height: 80%;
   width: 33%;
   z-index: 3;
 `;

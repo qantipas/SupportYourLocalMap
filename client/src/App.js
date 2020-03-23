@@ -11,11 +11,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <AppBar></AppBar>
         <Router>
+          <Route component={AppBar}></Route>
           <Route exact path="/map" component={Map} />
           <Route exact path="/uberuns" component={Uberuns} />
-
           <Route exact path="/" component={LandingPage} />
         </Router>
       </>
