@@ -141,7 +141,7 @@ const LandingPage = props => {
         </Col>
         <Col lg={2}></Col>
         <Col lg={3} sm={12} className="nopadding">
-          <div className="abstand"></div>
+          <div className="abstand2"></div>
           <div className="backgroundgrey">
             <div className="mittig">
               <img className="label" src="/img/label.png" />
@@ -157,7 +157,7 @@ const LandingPage = props => {
         </Col>
 
         <Col lg={5} sm={12} className="nopadding">
-          <div className="abstand"></div>
+          <div className="abstand2"></div>
           <div className="friends"></div>
         </Col>
         <Col lg={2}></Col>
@@ -174,7 +174,7 @@ const LandingPage = props => {
         </Col>
         <Col lg={2}></Col>
         <Col lg={5} sm={12} className="nopadding">
-          <div className="abstand"></div>
+          <div className="abstand2"></div>
           <div className="backgroundgrey ">
             <h4>Die Idee</h4>
             <p>
@@ -187,7 +187,7 @@ const LandingPage = props => {
           </div>
         </Col>
         <Col lg={3} sm={12} className="nopadding">
-          <div className="abstand"></div>
+          <div className="abstand2"></div>
           <div className="backgroundgrey">
             <div className="mittig">
               <img className="label" src="/img/label.png" />
