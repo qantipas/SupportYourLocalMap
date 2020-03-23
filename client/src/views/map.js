@@ -13,7 +13,7 @@ const StyledMap = styled(Map)`
 const MapView = props => {
   return (
     <>
-      <StyledMap></StyledMap>
+      <StyledMap {...props}></StyledMap>
       {/* <Menu></Menu> */}
     </>
   );

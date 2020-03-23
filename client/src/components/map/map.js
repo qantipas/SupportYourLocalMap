@@ -63,13 +63,10 @@ export default class Map extends Component {
   constructor(props) {
     super(props);
     // let { latitude, longitude, zoom } = useParams();
-    const latitude = props.match.params;
-    console.log(latitude);
     this.state = {
       viewport: {
         latitude: 50.121132,
         longitude: 8.64862,
-
         zoom: 3.5,
         bearing: 0,
         pitch: 0
@@ -77,9 +74,36 @@ export default class Map extends Component {
       popupInfo: null
     };
   }
+  // componentDidUpdate() {
+  //   const { longitude, latitude, zoom } = this.props.match.params;
+  //   const viewport = this.state.viewport;
+  //   if (
+  //     parseFloat(zoom) !== viewport.zoom ||
+  //     parseFloat(longitude) !== viewport.longitude ||
+  //     parseFloat(latitude) !== viewport.latitude
+  //   ) {
+  //     this.setState({
+  //       viewport: {
+  //         ...this.state.viewport,
+  //         latitude: parseFloat(latitude),
+  //         longitude: parseFloat(longitude),
+  //         zoom: parseFloat(zoom)
+  //       }
+  //     });
+  //     console.log("lat", latitude, longitude, zoom);
+  //   }
+  // }
 
   _updateViewport = viewport => {
     this.setState({ viewport });
+    // this.props.history.push(
+    //   "/map/" +
+    //     viewport.latitude +
+    //     "/" +
+    //     viewport.longitude +
+    //     "/" +
+    //     viewport.zoom
+    // );
   };
 
   _onClickMarker = shop => {
@@ -110,7 +134,15 @@ export default class Map extends Component {
 
   onSelected = (viewport, item) => {
     this.setState({ viewport });
-    console.log("Selected: ", item);
+    // console.log("Selected: ", viewport);
+    // this.props.history.push(
+    //   "/map/" +
+    //     viewport.latitude +
+    //     "/" +
+    //     viewport.longitude +
+    //     "/" +
+    //     viewport.zoom
+    // );
   };
   onResults = results => {
     this.setState({ results: results });

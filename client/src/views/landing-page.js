@@ -67,7 +67,7 @@ const SearchArea = styled.div`
 `;
 const LandingPage = props => {
   const onSelected = item => {
-    console.log(item);
+    console.log("instertedItem", item);
     props.history.push(
       "/map/" + item.latitude + "/" + item.longitude + "/" + item.zoom
     );
