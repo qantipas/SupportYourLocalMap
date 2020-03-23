@@ -31,7 +31,7 @@ const LandingPage = props => {
 <div className="abstand"></div>
   <div className="backgroundgreyuberuns">
     
-    <p>Gerade Einzelhändler und lokale Restaurants machen sich im Moment sehr große Sorgen. 
+    <p className="paddingunten">Gerade Einzelhändler und lokale Restaurants machen sich im Moment sehr große Sorgen. 
         Wir konnten mit verschiedenen Läden in unterschiedlichen Branchen sprechen, um uns ein Bild davon zu machen, 
         wie mit einer anstehenden Ausgangssperre umgegangen wird. Wir hatten das Gefühl, dass die Läden sehr unterschiedlich vorbereitet sind. 
         Während die einen sich schon um einen Lieferservice und Online-Shops gekümmert haben, versuchten andere noch herauszufinden, 
@@ -63,7 +63,7 @@ Natürlich wird dabei darauf geachtet, dass die vorgeschlagenen Ideen im Rahmen 
 
 <div className="abstand"></div>
 
-<Row>
+{/* <Row>
 
 <Col lg={2}></Col>
 <Col lg={3} sm={12} className="nopadding">
@@ -83,7 +83,7 @@ Natürlich wird dabei darauf geachtet, dass die vorgeschlagenen Ideen im Rahmen 
 
 </Col>
 
-</Row>
+</Row> */}
 
 <footer >
 <Row >
