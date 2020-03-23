@@ -13,7 +13,13 @@ class App extends Component {
       <>
         <Router>
           <Route component={AppBar}></Route>
-          <Route exact path="/map" component={Map} />
+          <Route exact path="/map/" component={Map} />
+
+          <Route
+            exact
+            path="/map/:latitude/:longditude/:zoom"
+            render={props => <Map props={{ ...props }}></Map>}
+          />
           <Route exact path="/uberuns" component={Uberuns} />
           <Route exact path="/" component={LandingPage} />
         </Router>

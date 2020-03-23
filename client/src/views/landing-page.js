@@ -69,12 +69,7 @@ const LandingPage = props => {
   const onSelected = item => {
     console.log(item);
     props.history.push(
-      "/map/?lat=" +
-        item.latitude +
-        "&long=" +
-        item.longitude +
-        "&zoom=" +
-        item.zoom
+      "/map/" + item.latitude + "/" + item.longitude + "/" + item.zoom
     );
   };
   return (

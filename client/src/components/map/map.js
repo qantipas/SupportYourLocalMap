@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Geocoder from "react-mapbox-gl-geocoder";
-
+import { useParams } from "react-router-dom";
 import Menu from "../map-menu";
 import MapGL, {
   Popup,
@@ -62,6 +62,9 @@ const scaleControlStyle = {
 export default class Map extends Component {
   constructor(props) {
     super(props);
+    // let { latitude, longitude, zoom } = useParams();
+    const latitude = props.match.params;
+    console.log(latitude);
     this.state = {
       viewport: {
         latitude: 50.121132,
