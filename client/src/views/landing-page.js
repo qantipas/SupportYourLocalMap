@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import "./landingpage.css";
@@ -78,7 +79,7 @@ const LandingPage = props => {
     );
   };
   return (
-    <div>
+    <div> <div className="background">
       <div className="headerbackground">
         <SearchArea>
           <DescriptionText>
@@ -132,16 +133,18 @@ const LandingPage = props => {
         {/* </div> */}
         {/* <StyledInput></StyledInput> */}
       </div>
+      
+      <div className="body">
       <div className="abstand"></div>
-
-      <Row>
-        <Col lg={2}></Col>
-        <Col lg={10}>
+      
+      <Row className="responsive">
+        
+        <Col lg={12}>
           <h1 className="paddingrand supporthashtag">#support your locals</h1>
         </Col>
-        <Col lg={2}></Col>
-        <Col lg={3} sm={12} className="nopadding">
-          <div className="abstand2"></div>
+        
+        <Col lg={4} sm={12} className="nopadding">
+          
           <div className="backgroundgrey">
             <div className="mittig">
               <img className="label" src="/img/label.png" />
@@ -156,11 +159,12 @@ const LandingPage = props => {
           </div>
         </Col>
 
-        <Col lg={5} sm={12} className="nopadding">
-          <div className="abstand2"></div>
-          <div className="friends"></div>
+        <Col lg={8} sm={12} className="nopadding">
+          
+          <img className="responsive" src="/img/friends.jpg"  />
+         
         </Col>
-        <Col lg={2}></Col>
+       
       </Row>
 
       {/* zweiter Abschnitt */}
@@ -168,14 +172,16 @@ const LandingPage = props => {
       <div className="abstand"></div>
 
       <Row>
-        <Col lg={2}></Col>
-        <Col lg={10}>
+        
+        <Col lg={12}>
           <h1 className="paddingrand supporthashtag">#staystrong</h1>
         </Col>
-        <Col lg={2}></Col>
-        <Col lg={5} sm={12} className="nopadding">
-          <div className="abstand2"></div>
-          <div className="backgroundgrey ">
+        <Col lg={8 } sm={12} className="nopadding">
+
+          <img className="responsive" src="/img/wollenwirnicht.jpg"  />
+         
+        
+          {/* <div className="backgroundgrey ">
             <h4>Die Idee</h4>
             <p>
               Von dem klassischen Lieferservice, bis hin zur eingebauten
@@ -184,21 +190,20 @@ const LandingPage = props => {
               wir Läden mit besonders kreativen Lösungen vor, um anderen
               Betrieben noch mehr kreativen Input und Anstöße zu geben.
             </p>
-          </div>
+          </div> */}
         </Col>
-        <Col lg={3} sm={12} className="nopadding">
-          <div className="abstand2"></div>
+        <Col lg={4} sm={12} className="nopadding">
+          
           <div className="backgroundgrey">
-            <div className="mittig">
-              <img className="label" src="/img/label.png" />
-            </div>
+            
+            <h4 className="roteschrift">Bilder die wir verhindern wollen.</h4>
             <p>
-              Werde von deiner Lokalen Kundschaft mit deinen „Coronaangeboten
-              gefunden.
+              Werde von deiner lokalen Kundschaft mit deinen „Coronaangeboten"
+              gefunden. 
             </p>
           </div>
         </Col>
-        <Col lg={2}></Col>
+       
       </Row>
 
       {/* Beispiele */}
@@ -206,11 +211,11 @@ const LandingPage = props => {
       <div className="abstand"></div>
 
       <Row>
-        <Col lg={2}></Col>
-        <Col lg={3} sm={12} className="padding-right">
+        
+        <Col lg={4} sm={12} className="padding-right">
           <div className="laden1"></div>
         </Col>
-        <Col lg={5} sm={12} className="padding-left" className="nopadding">
+        <Col lg={8} sm={12} className="padding-left" className="nopadding">
           <div className="backgroundgrey">
             <h4>Foto Firlé</h4>
             <p>
@@ -227,16 +232,16 @@ const LandingPage = props => {
           </div>
         </Col>
 
-        <Col lg={2}></Col>
+        
       </Row>
 
       {/* Beispiel 2 */}
       <div className="abstand"></div>
 
       <Row>
-        <Col lg={2}></Col>
+        
 
-        <Col lg={5} sm={12} className="padding-right">
+        <Col lg={8} sm={12} className="padding-right">
           <div className="backgroundgrey">
             <h4>Musik Weber</h4>
 
@@ -253,11 +258,11 @@ const LandingPage = props => {
             </p>
           </div>
         </Col>
-        <Col lg={3} sm={12} className="padding-left" className="nopadding">
+        <Col lg={4} sm={12} className="padding-left" className="nopadding">
           <div className="laden1"></div>
         </Col>
 
-        <Col lg={2}></Col>
+        
       </Row>
 
       {/* Beispiel 3 */}
@@ -265,11 +270,11 @@ const LandingPage = props => {
       <div className="abstand"></div>
 
       <Row>
-        <Col lg={2}></Col>
-        <Col lg={3} sm={12} className="padding-right">
+        
+        <Col lg={4} sm={12} className="padding-right">
           <div className="laden1"></div>
         </Col>
-        <Col lg={5} sm={12} className="padding-left" className="nopadding">
+        <Col lg={8} sm={12} className="padding-left" className="nopadding">
           <div className="backgroundgrey">
             <h4>Name Laden</h4>
             <p>
@@ -281,15 +286,17 @@ const LandingPage = props => {
           </div>
         </Col>
 
-        <Col lg={2}></Col>
+        
       </Row>
+
+      </div>
 
       <footer>
         <Row>
           <Col lg={2}></Col>
           <Col lg={2}>
             <h5 className="paddingrand">
-              <a>Über uns</a>
+              <a href="/uberuns">Über uns</a>
             </h5>
             <h5 className="paddingrand">
               <a>Impressum</a>
@@ -307,6 +314,7 @@ const LandingPage = props => {
           </Col>
         </Row>
       </footer>
+    </div>
     </div>
   );
 };
