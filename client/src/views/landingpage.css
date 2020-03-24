@@ -259,9 +259,16 @@ a:hover {
   padding-bottom: 2rem;
 }
 
+@media (min-width: 995px){
 .roteschrift{
   font-size: 2.6vw;
 }
+}
+@media (max-width: 995px){
+  .roteschrift{
+    font-size: 10vw;
+  }
+  }
 
 footer {
   margin-top: 5rem;
