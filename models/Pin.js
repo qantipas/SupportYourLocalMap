@@ -50,10 +50,6 @@ const PinSchema = new mongoose.Schema({
   confirm: {
     type: Boolean,
     required: true
-  },
-  date: {
-    type: Date,
-    default: Date.now
   }
 });
 

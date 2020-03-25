@@ -149,6 +149,12 @@ export default function FullScreenDialog(props) {
   const onComplete = res => {
     setResult(res);
     console.log(apiEndpoint);
+    axios.post(apiEndpoint + "/api/pins/", {
+      ...res,
+      x_position: place.latitude,
+      y_position: place.longitude
+    });
+    setOpen(false);
   };
 
   return (

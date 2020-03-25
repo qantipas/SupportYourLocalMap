@@ -17,8 +17,10 @@
         "body-parser": "^1.19.0",
         "concurrently": "^5.1.0",
         "config": "^3.3.0",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "mongoose": "^5.9.5",
+        "morgan": "^1.10.0",
         "survey-react": "^1.5.17",
         "validation": "0.0.1"
     },

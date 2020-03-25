@@ -7,7 +7,6 @@ const router = express.Router();
 const Pin = require("../../models/Pin"); // @route GET api/pins // @description Get all pins // @access Public
 
 router.get("/pins/", (req, res) => {
-  console.log(req);
   Pin.find()
     .then(pins => res.json(pins))
     .catch(err => res.status(404).json({ nopins: "No pins found" }));
@@ -26,9 +25,11 @@ router.get("/pins/:id", (req, res) => {
 // @description add/save book
 // @access Public
 router.post("/pins/", (req, res) => {
-  Pin.create(req.body)
-    .then(book => res.json({ msg: "Pin added successfully" }))
-    .catch(err => res.status(400).json({ error: "Unable to add this book" }));
+  const newPin = new Pin(req.body);
+  newPin
+    .save()
+    .then(pin => res.json(pin))
+    .catch(err => res.status(400).json({ error: err }));
 });
 
 // @route GET api/pins/:id
