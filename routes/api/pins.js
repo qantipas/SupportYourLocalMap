@@ -3,11 +3,12 @@
 const express = require("express");
 const router = express.Router();
 
-// Load Book model
-const Book = require("../../models/Book"); // @route GET api/pins // @description Get all pins // @access Public
+// Load Pin model
+const Pin = require("../../models/Pin"); // @route GET api/pins // @description Get all pins // @access Public
 
 router.get("/pins/", (req, res) => {
-  Book.find()
+  console.log(req);
+  Pin.find()
     .then(pins => res.json(pins))
     .catch(err => res.status(404).json({ nopins: "No pins found" }));
 });
@@ -16,17 +17,17 @@ router.get("/pins/", (req, res) => {
 // @description Get single book by id
 // @access Public
 router.get("/pins/:id", (req, res) => {
-  Book.findById(req.params.id)
+  Pin.findById(req.params.id)
     .then(book => res.json(book))
-    .catch(err => res.status(404).json({ nobookfound: "No Book found" }));
+    .catch(err => res.status(404).json({ nobookfound: "No Pin found" }));
 });
 
 // @route GET api/pins
 // @description add/save book
 // @access Public
 router.post("/pins/", (req, res) => {
-  Book.create(req.body)
-    .then(book => res.json({ msg: "Book added successfully" }))
+  Pin.create(req.body)
+    .then(book => res.json({ msg: "Pin added successfully" }))
     .catch(err => res.status(400).json({ error: "Unable to add this book" }));
 });
 
@@ -34,7 +35,7 @@ router.post("/pins/", (req, res) => {
 // @description Update book
 // @access Public
 router.put("/pins/:id", (req, res) => {
-  Book.findByIdAndUpdate(req.params.id, req.body)
+  Pin.findByIdAndUpdate(req.params.id, req.body)
     .then(book => res.json({ msg: "Updated successfully" }))
     .catch(err =>
       res.status(400).json({ error: "Unable to update the Database" })
@@ -45,8 +46,8 @@ router.put("/pins/:id", (req, res) => {
 // @description Delete book by id
 // @access Public
 router.delete("/pins/:id", (req, res) => {
-  Book.findByIdAndRemove(req.params.id, req.body)
-    .then(book => res.json({ mgs: "Book entry deleted successfully" }))
+  Pin.findByIdAndRemove(req.params.id, req.body)
+    .then(book => res.json({ mgs: "Pin entry deleted successfully" }))
     .catch(err => res.status(404).json({ error: "No such a book" }));
 });
 

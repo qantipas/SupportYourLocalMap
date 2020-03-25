@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Geocoder from "react-mapbox-gl-geocoder";
+import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import { useParams } from "react-router-dom";
 import Menu from "../map-menu";
 import MapGL, {
@@ -24,6 +25,10 @@ const SearchForm = styled(Geocoder)`
     color: #4a4a4a;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    @media (max-width: 768px) {
+      width: 98%;
+      margin: 1%;
+    }
   }
   .react-geocoder-results {
     color: grey;
@@ -33,6 +38,10 @@ const SearchForm = styled(Geocoder)`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-color: white;
     opacity: 100%;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 0%;
+    }
   }
 `;
 const TOKEN =
@@ -62,7 +71,6 @@ const scaleControlStyle = {
 export default class Map extends Component {
   constructor(props) {
     super(props);
-    // let { latitude, longitude, zoom } = useParams();
     this.state = {
       viewport: {
         latitude: 50.121132,
@@ -74,60 +82,15 @@ export default class Map extends Component {
       popupInfo: null
     };
   }
-  // componentDidUpdate() {
-  //   const { longitude, latitude, zoom } = this.props.match.params;
-  //   const viewport = this.state.viewport;
-  //   if (
-  //     parseFloat(zoom) !== viewport.zoom ||
-  //     parseFloat(longitude) !== viewport.longitude ||
-  //     parseFloat(latitude) !== viewport.latitude
-  //   ) {
-  //     this.setState({
-  //       viewport: {
-  //         ...this.state.viewport,
-  //         latitude: parseFloat(latitude),
-  //         longitude: parseFloat(longitude),
-  //         zoom: parseFloat(zoom)
-  //       }
-  //     });
-  //     console.log("lat", latitude, longitude, zoom);
-  //   }
-  // }
 
   _updateViewport = viewport => {
     this.setState({ viewport });
-    // this.props.history.push(
-    //   "/map/" +
-    //     viewport.latitude +
-    //     "/" +
-    //     viewport.longitude +
-    //     "/" +
-    //     viewport.zoom
-    // );
   };
 
   _onClickMarker = shop => {
     this.setState({ popupInfo: shop });
   };
 
-  // _renderPopup() {
-  //   const { popupInfo } = this.state;
-
-  //   return (
-  //     popupInfo && (
-  //       <Popup
-  //         tipSize={5}
-  //         anchor="top"
-  //         longitude={popupInfo.longitude}
-  //         latitude={popupInfo.latitude}
-  //         closeOnClick={false}
-  //         onClose={() => this.setState({ popupInfo: null })}
-  //       >
-  //         <CityInfo info={popupInfo} />{" "}
-  //       </Popup>
-  //     )
-  //   );
-  // }
   queryParams = {
     country: "de"
   };

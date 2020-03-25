@@ -9,46 +9,15 @@ import Link from "@material-ui/core/Link";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import styled from "styled-components";
-const CallToActionButton = styled.button`
-  position: fixed;
-  right: 25px;
-  width: 140px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  margin: 20px;
-  height: 35px;
-  text-align: center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  background-image: linear-gradient(
-    to right,
-    #e64c3c,
-    #ec8c69,
-    #ff1b01,
-    #fbb03b
-  );
-  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+import CallToActionButton from "./sign-up-dialog";
 
-  :hover {
-    background-position: 100% 0;
-    moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-  }
-
-  :focus {
-    outline: none;
+const StyledHeader = styled(AppBar)`
+  && {
+    height: 64px;
+    z-index: 5;
   }
 `;
+
 const Name = styled.h1`
   font-size: 4rem;
   font-family: proxima-nova, sans-serif;
@@ -80,7 +49,7 @@ export default function ButtonAppBar(props) {
   const preventDefault = event => event.preventDefault();
   return (
     <div className={classes.root}>
-      <AppBar style={{ background: "white" }} position="static">
+      <StyledHeader style={{ background: "white" }} position="static">
         <Toolbar>
           {/* <IconButton
             edge="start"
@@ -102,9 +71,9 @@ export default function ButtonAppBar(props) {
           <Button onClick={() => props.history.push("/map/")}>Map</Button>
 
           {/* <Button color="inherit">Login</Button> */}
-          <CallToActionButton>Unternehmen</CallToActionButton>
+          <CallToActionButton text="Unternehmen"></CallToActionButton>
         </Toolbar>
-      </AppBar>
+      </StyledHeader>
     </div>
   );
 }
